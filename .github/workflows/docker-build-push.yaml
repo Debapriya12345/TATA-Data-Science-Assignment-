@@ -39,4 +39,4 @@ jobs:
         push: true
         # 📌Specifies two tags for the image: debapriya777/fastapi-diabetes
         # ✅This ensures every Docker image is versioned with the commit SHA and latest
-        tags: debapriya777/TATA_Assignment:${{ env.SHORT_SHA }},debapriya777/TATA_Assignment:latest
+        tags: debapriya777/assignment_datascience:${{ env.SHORT_SHA }},debapriya777/assignment_datascience:latest
