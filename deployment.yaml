@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: TATA_Assignment_deployment   # ✅ Name of the deployment
+spec:
+  replicas: 2  # ✅ Scale the application for redundancy
+  selector:
+    matchLabels:
+      app: TATA_Assignment
+  template:
+    metadata:
+      labels:
+        app: TATA_Assignment
+    spec:
+      containers:
+        - name: TATA_Assignment
+          image: debapriya777/assignment_datascience:latest  
+          ports:
+            - containerPort: 8000
+          resources:
+            limits:
+              cpu: "1"
+              memory: "1Gi"
+            requests:
+              cpu: "500m"
+              memory: "512Mi"

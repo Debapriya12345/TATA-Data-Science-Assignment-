@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: TATA_Assignment-service # ✅ Name of the Service
+spec:
+  selector:
+    app: TATA_Assignment 
+  ports:
+    - protocol: TCP
+      port: 80 # 
+      targetPort: 8000 
+  type: LoadBalancer  

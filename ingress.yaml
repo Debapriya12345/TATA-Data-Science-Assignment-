@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1  #Uses the latest Kubernetes Ingress API
+kind: Ingress
+metadata:
+  name: TATA_Assignment-ingress  
+spec:
+  ingressClassName: nginx  
+  rules:
+    - host: fastapi-mlops.eastus.cloudapp.azure.com
+      http:
+        paths:
+          - path: / 
+            pathType: Prefix
+            backend:
+              service:
+                name: TATA_Assignment_service # Same name like service.yaml
+                port:
+                  number: 80 
