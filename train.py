@@ -1,35 +1,21 @@
-import numpy as np                      # For numerical operations
-import pandas as pd                     # For data manipulation and analysis
-import matplotlib.pyplot as plt         # For data visualization
-
-# 🔧 Preprocessing and Pipeline Tools from Scikit-learn
-from sklearn.pipeline import Pipeline                           # For building ML pipelines
-from sklearn.preprocessing import OneHotEncoder, StandardScaler # For categorical encoding and feature scaling
-from sklearn.compose import ColumnTransformer                   # For applying different preprocessing to columns
-
-
+import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
 
-# ⚖️ Handling Imbalanced Data
-from imblearn.combine import SMOTEENN                           # Combines SMOTE and ENN for class balancing
-from imblearn.pipeline import Pipeline as ImbPipeline           # Pipeline that supports imbalanced-learn transformers
-
-# 📊 Model Training and Evaluation
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import OneHotEncoder, StandardScaler, LabelEncoder
+from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import train_test_split, learning_curve, RandomizedSearchCV
-
-
-# 🔍 Feature Selection
-from sklearn.feature_selection import SelectFromModel           # Select features based on importance weights
-
-# 🌲 Machine Learning Model
-from sklearn.ensemble import RandomForestClassifier             # Random forest model for classification tasks
-
-# 📈 Evaluation Metrics
+from sklearn.feature_selection import SelectFromModel
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import (accuracy_score, precision_score, recall_score,
                              f1_score, roc_auc_score, classification_report,
-                             roc_curve, ConfusionMatrixDisplay)
+                             roc_curve, ConfusionMatrixDisplay,confusion_matrix)
+
+from imblearn.combine import SMOTEENN
+from imblearn.pipeline import Pipeline as ImbPipeline
 import pickle
 
 
