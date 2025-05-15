@@ -12,10 +12,7 @@ from sklearn.feature_selection import SelectFromModel
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import (accuracy_score, precision_score, recall_score,
                              f1_score, roc_auc_score, classification_report,
-                             roc_curve, ConfusionMatrixDisplay,confusion_matrix)
-
-from imblearn.combine import SMOTEENN
-from imblearn.pipeline import Pipeline as ImbPipeline
+                             roc_curve, ConfusionMatrixDisplay)
 import pickle
 
 
